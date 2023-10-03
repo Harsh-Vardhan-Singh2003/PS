@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main()
+{ int P[101]=0;
+  int i,j;
+
+  i=2;
+  for(j=i*2;j<=100;j+=2)
+  {
+    P[j]=1;
+  }
+  for(i=3;i*i<=100;i+=2)
+  {
+    for(j=i*2;j<=100;j+=1)
+    {
+        P[j]=1;
+    }
+  }
+
+  for(j=4;j<=100;j++)
+  {
+    if(P[j]==0)
+   {
+    printf("%d",&P[j]);
+   }
+  }
+
+}
